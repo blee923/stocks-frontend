@@ -11,6 +11,7 @@ class Submission extends React.Component {
             currentPrice: '',
             highPrice: '',
             lowPrice: '',
+            openingPrice: '',
             timestamp: ''
         };
     }
@@ -31,6 +32,7 @@ class Submission extends React.Component {
                 currentPrice: data.currentPrice,
                 highPrice: data.highPrice,
                 lowPrice: data.lowPrice,
+                openingPrice: data.openingPrice,
                 timestamp: data.timestamp
             }, console.log(component.state));
           }).catch(function (error) {
@@ -47,6 +49,7 @@ class Submission extends React.Component {
                 Current Price: ${this.state.currentPrice}<br />
                 High Price: ${this.state.highPrice}<br />
                 Low Price: ${this.state.lowPrice}<br />
+                Opening Price: ${this.state.openingPrice}<br />
                 Timestamp: {this.state.timestamp}</p>
             </div>
         );
