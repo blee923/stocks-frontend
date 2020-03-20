@@ -34,7 +34,7 @@ class Submission extends React.Component {
                 lowPrice: data.lowPrice,
                 openingPrice: data.openingPrice,
                 timestamp: data.timestamp
-            }, console.log(component.state));
+            });
           }).catch(function (error) {
               console.log(error);
           });
@@ -43,6 +43,7 @@ class Submission extends React.Component {
     render() {
         return (
             <div>
+                <h1>Quote Stock Prices</h1>
                 <TextField id = "textbox" label = "Company Symbol" onChange = {this.handleChange}></TextField>
                 <Button variant = "contained" color = "primary" style = {{marginTop: 10, marginLeft: 10}} onClick = {() => this.handleClick()}>Quote!</Button>
                 <p>Company Symbol: {this.state.finalCompanyName}<br />
